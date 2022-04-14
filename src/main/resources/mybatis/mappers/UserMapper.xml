@@ -18,4 +18,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
     <select id="getUserById" resultType="com.it.mz.pojo.User">
         select * from user where id=#{id};
     </select>
+    <select id="getUserByNameAndPwd" resultType="com.it.mz.pojo.User">
+        select * from user where username=#{param1} and password=#{param2}
+    </select>
 </mapper>

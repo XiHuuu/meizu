@@ -62,7 +62,7 @@
 <%--                                    <li><a href="#">Brazil +55</a></li>--%>
 <%--                                </ul>--%>
 <%--                            </div>--%>
-                            <form>
+                            <form action="${pageContext.request.contextPath}/user/register" method="post">
                                 <input name="username" type="text" class="form-control" aria-label="..."placeholder="用户账号">
                                 <input name="password" type="password" class="form-control" aria-label="..."placeholder="用户密码">
                                 <input style="width: 100px;margin-bottom: 30px;margin-right: 20px" type="text" placeholder="验证码" name="code"><img style="width: 100px;height: 30px" id="code_img" alt="" src="${pageContext.request.contextPath}/kaptcha.jpg">

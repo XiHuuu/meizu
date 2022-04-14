@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.util.List;
 
@@ -51,15 +52,42 @@ public class UserController {
         return "";
     }
 
+    @RequestMapping("getUserByNameAndPwd")
+    public String getUserByNameAndPwd(String username,String password){
+        User user = userService.getUserByNameAndPwd(username,password);
+        return "";
+    }
+
     @RequestMapping("login")
     public String login(User user, Model model, HttpServletRequest req , HttpServletResponse resp,String code) throws ServletException, IOException {
         String token= (String)req.getSession().getAttribute(KAPTCHA_SESSION_KEY);
         req.getSession().removeAttribute(KAPTCHA_SESSION_KEY);
         if (!(token != null && token.equalsIgnoreCase(code))){
-            req.setAttribute("msg","您输入的验证码错误");
-            req.getRequestDispatcher("/error.jsp").forward(req,resp);
+            model.addAttribute("msg","您输入的验证码错误");
+            return "/error.jsp";
         }
-        return "";
+        User u = userService.getUserByNameAndPwd(user.getUsername(), user.getPassword());
+        System.out.println(u);
+        if (u == null){
+            model.addAttribute("msg","您输入的用户名或密码错误");
+            return "/error.jsp";
+        }else {
+            HttpSession session = req.getSession();
+            session.setAttribute("user",user);
+            return "redirect:/index.jsp";
+        }
+    }
+
+    @RequestMapping("register")
+    public String register(User user,Model model,HttpServletRequest req,String code){
+        String token= (String)req.getSession().getAttribute(KAPTCHA_SESSION_KEY);
+        req.getSession().removeAttribute(KAPTCHA_SESSION_KEY);
+        if (!(token != null && token.equalsIgnoreCase(code))){
+            model.addAttribute("msg","您输入的验证码错误");
+            return "/error.jsp";
+        }
+        userService.addUser(user);
+        return "redirect:/login.jsp";
     }
 
 }
