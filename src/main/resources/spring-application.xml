@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/util
+        http://www.springframework.org/schema/util/spring-util.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd
+        http://www.springframework.org/schema/aop
+        http://www.springframework.org/schema/aop/spring-aop.xsd
+        http://www.springframework.org/schema/tx
+        http://www.springframework.org/schema/tx/spring-tx.xsd">
+        <context:component-scan base-package="com.it.mz">
+            <context:exclude-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
+        </context:component-scan>
+        <context:property-placeholder location="classpath:druid.properties"></context:property-placeholder>
+        <bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource">
+            <property name="username" value="${uname}"></property>
+            <property name="password" value="${password}"></property>
+            <property name="url" value="${url}"></property>
+            <property name="driverClassName" value="${driverClassName}"></property>
+        </bean>
+
+        <bean class="org.mybatis.spring.SqlSessionFactoryBean">
+            <property name="mapperLocations" value="classpath:mybatis/mappers/*.xml"></property>
+            <property name="dataSource" ref="dataSource"></property>
+            <property name="configLocation" value="classpath:mybatis/mybatis-config.xml"></property>
+            <property name="typeAliasesPackage" value="com.it.mz.pojo"></property>
+        </bean>
+
+        <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+            <property name="basePackage" value="com.it.mz.mapper"></property>
+        </bean>
+
+        <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+            <property name="dataSource" ref="dataSource"></property>
+        </bean>
+        <tx:annotation-driven transaction-manager="transactionManager"></tx:annotation-driven>
+
+<!--        google验证码-->
+        <bean id="captchaProducer" class="com.google.code.kaptcha.impl.DefaultKaptcha">
+            <property name="config">
+                <bean class="com.google.code.kaptcha.util.Config">
+                    <constructor-arg>
+                        <props>
+                            <prop key="kaptcha.border">yes</prop>
+                            <prop key="kaptcha.border.color">105,179,90</prop>
+                            <prop key="kaptcha.textproducer.font.color">blue</prop>
+<!--                            <prop key="kaptcha.image.width">125</prop>-->
+<!--                            <prop key="kaptcha.image.height">45</prop>-->
+                            <prop key="kaptcha.textproducer.font.size">45</prop>
+                            <prop key="kaptcha.session.key">code</prop>
+                            <prop key="kaptcha.textproducer.char.length">4</prop>
+                            <prop key="kaptcha.textproducer.font.names">宋体,楷体,微软雅黑</prop>
+                        </props>
+                    </constructor-arg>
+                </bean>
+            </property>
+        </bean>
+</beans>

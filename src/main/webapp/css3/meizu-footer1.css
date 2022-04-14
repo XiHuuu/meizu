@@ -1,0 +1,199 @@
+.meizu-footer {
+    margin: 0;
+    padding: 0;
+    z-index: 999;
+    font-size: 14px;
+    color: #515151;
+    background-color: #fff;
+}
+.meizu-footer-wrap {
+    width: 1240px;
+    margin: 0 auto;
+}
+.meizu-row {
+    max-width: 1240px;
+    position: relative;
+}
+.meizu-footer-service {
+    width: 1000px;
+    float: left;
+}
+.meizu-footer-service li {
+    float: left;
+    text-align: center;
+    width: 15%;
+    list-style: none;
+}
+.meizu-footer-link a {
+    line-height: 27px;
+    font-size: 12px;
+    color: #666;
+    text-decoration: none;
+}
+.meizu-footer-service li img {
+    width: 50px;
+    display: block;
+    margin: 0 auto;
+}
+.onlive-server .onlive-btn {
+    height: 30px;
+    padding: 0 16px;
+    /* overflow: hidden; */
+    position: relative;
+    text-align: center;
+    line-height: 30px;
+    color: #fff;
+    border-radius: 20px;
+    /* margin-top: 0px; */
+    display: inline-block;
+    font-size: 14px;
+    background: #008cff;
+    /* float: right; */
+}
+.onlive-server {
+    float: right;
+    text-align: right;
+    /* margin-top: -18px; */
+}
+.footer-hr {
+    margin: 10px auto 28px;
+    display: block;
+    height: 1px;
+    border-top: 1px solid #eee;
+    padding: 0;
+}
+.meizu-row {
+    max-width: 1240px;
+    position: relative;
+}
+.meizu-footer-info {
+    color: #999;
+    text-align: left;
+    font-size: 12px;
+    width: 100%;
+}
+.clearfix{
+        list-style: none;
+}
+.meizu-footer-info-left {
+    float: left;
+}
+.meizu-footer-info-left ul li {
+    padding-right: 15px;
+    border-right: 1px solid #d6d6d6;
+    float: left;
+    height: 18px;
+    margin-right: 15px;
+}
+.meizu-footer-certificate {
+    padding-top: 8px;
+    padding-left: 40px;
+}
+.meizu-footer-info a {
+    color: #999;
+}
+.meizu-footer-certificate a {
+    margin: 0 3px;
+}
+.onlive-server span {
+    color: #999;
+    font-size: 12px;
+    line-height: 30px;
+}
+.onlive-server .phonenum {
+    color: #008cff;
+    font-size: 25px;
+    font-weight: 400;
+    margin-top: -6px;
+    line-height: 40px;
+}
+
+.rightdown-icon{
+    float: left;
+}
+.meizu-footer-info img {
+    margin-bottom: -9px;
+}
+.rightdown-icon .ii-subscribe-img1,.ii-subscribe-img2,.ii-subscribe-img3,.ii-subscribe-img4{
+    display: inline-block;
+    width: 21px;
+    height: 18px;
+    position: relative;
+    top: 80px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 96%;
+}
+.ii-subscribe-img1{
+    background-image: url(https://fms.res.meizu.com/dms/2019/01/07/3b085af8-a47b-453c-b147-a4b352fb3a14.png);
+}
+.ii-subscribe-img1:hover{
+    background-image: url(https://fms.res.meizu.com/dms/2019/01/07/6721704b-7b6d-445d-a025-e33649e5db74.png);
+}
+.ii-subscribe-img2{
+    background-image: url(https://fms.res.meizu.com/dms/2019/01/07/58e3e041-5543-4414-aaf1-d8e1fd539af6.png);
+}
+.ii-subscribe-img2:hover{
+    background-image: url(https://fms.res.meizu.com/dms/2019/01/07/cb0d00dc-41f7-4339-a0b3-25ee7dca1d4a.png);
+}
+.ii-subscribe-img3{
+    background-image: url(https://fms.res.meizu.com/dms/2019/01/07/52cba4a4-b3a6-4522-9883-d3a918e7d4a9.png);
+}
+.ii-subscribe-img3:hover{
+    background-image: url(https://fms.res.meizu.com/dms/2019/01/07/aff10988-6493-49c0-961a-0c91eae603b4.png);
+}
+.ii-subscribe-img4{
+    background-image: url(https://fms.res.meizu.com/dms/2019/01/07/bcccf9d2-e0e5-441b-b4a3-f78c12bc3933.png);
+}
+.ii-subscribe-img4:hover{
+    background-image: url(https://fms.res.meizu.com/dms/2019/01/07/7df8d821-a5c4-4619-9981-04e31db6e3de.png);
+}
+
+
+.meizu-footer-info img {
+    margin-bottom: -9px;
+}
+.rightdown-icon a img {
+    position: absolute;
+    bottom: 40px;
+    left: -20px;
+    width: 180px;
+}
+
+
+
+
+
+.ii-subscribe {
+    float: right;
+    margin-top: 25px;
+    position: relative;
+}
+.ii-hr {
+    display: inline-block;
+    width: 1px;
+    height: 14px;
+    background: #eee;
+    margin: 0 10px;
+    position: relative;
+    top: 200px;
+    }
+    .meizu-footer-link a:hover {
+        color: #008cff;
+    }
+    .onlive-server a:hover{
+        color: white;
+    }
+    .towa{
+        position: relative;
+    }
+    .twoma{
+        position: absolute;
+        top: 100px;
+        right: 200px;
+        display: none;
+        z-index: 3;
+    }
+    .twoa:hover .twoma{
+        display: block;
+    }

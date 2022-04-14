@@ -1,0 +1,340 @@
+ul{
+    margin: 0;
+    padding: 0;
+    list-style: none; 
+}
+a{
+    color: black;
+    text-align: center;
+}
+a:hover{
+    text-decoration:none;
+}
+
+.div3-1 a:hover
+ {
+    color: #008cff;
+}
+/* 设置导航栏的显示优先级大于轮播图 */
+.div3-1{
+    position: relative; 
+    z-index: 3; 
+}
+.li3-1{
+    float:left;
+    line-height: 80px;
+    display: inline-block;
+    z-index: 5;
+}
+.xia{
+    display: none;
+    position: absolute;
+    left: 0px;
+    background-color: #f9f9f9;
+    width: 100%;
+    height: 200px;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    
+}
+
+.li3-1:hover .xia{
+display: block;
+}
+
+.li3-1 a{
+    color: white;
+    display: block;
+    /* 左右内边距各填充20px */
+    padding: 0 20px;
+    text-decoration:none;
+
+}
+.li3-1 a:hover{
+    color: rgb(59, 166, 255);
+}
+.div3-2 a{
+    
+    line-height: 80px;
+    float: left;
+}
+.div3-2{
+margin-left: 50px;
+}
+.btn3-1{
+    margin-top: 10px;
+}
+.li3-2{
+    float: left;
+}
+.li3-2 img{
+    width: 120px;
+}
+.li3-2 a p{
+    height: 15px;
+    color: black;
+}
+.xia-2{
+    display: none;
+    position: absolute;
+    padding-left: 20px;
+    left: 0px;
+    background-color: #f9f9f9;
+    width: 100%;
+    height: 360px;
+    box-shadow: none;
+    z-index: 2;
+    
+}
+.li3-1:hover .xia-2{
+display: block;
+}
+.btn3-1{
+    border: none;
+}
+.div3-3{
+    position: relative;
+    top: -80px; 
+    z-index: 1;
+}
+.div3-4{
+    position: relative;
+    display: inline-block;
+}
+.xia-3{
+    display: none;
+    position: absolute;
+    top: 50px;
+    background-color: #f9f9f9;
+    min-width:160px ;
+    box-shadow: none;
+    z-index: 2;
+    text-align: center;
+    
+    
+}
+.xia-3 a{
+    display: block;
+}
+.div3-4:hover .xia-3{
+display: block;
+}
+.xia-4{
+    display: none;
+    position: absolute;
+    top: 50px;
+    background-color: #f9f9f9;
+    min-width:400px ;
+    height: 100px;
+    line-height: 20px;
+    box-shadow: none;
+    z-index: 2;
+    text-align: center;
+    margin: 0 auto;
+    right: 0;
+    
+}
+.span3-8{
+    padding-top: 15px;
+    font-size: 12px;
+    color:rgb(153, 153, 153) ;
+}
+.div3-4:hover .xia-4{
+display: block;
+}
+.div3-5 a p{
+    color: rgb(153, 153, 153);
+}
+.div3-6{
+    text-align: center;
+    background-color: rgb(244, 244, 244);
+    height: 80px;
+}
+.div3-7{
+    margin-top: 30px;
+}
+.div3-7 a,span{
+    display: block;
+    font-size: 18px;
+}
+.span3-1{
+    font-size: 15px;
+    color: rgb(54, 54, 54);
+}
+.span3-2{
+    color:rgb(204, 0, 0) ;
+}
+.div3-7 a{
+    background-color: white;
+    /* 阴影出现的动画时间 */
+    transition: all 0.5s;
+}
+/* 鼠标选中时背景阴影 */
+.div3-7 a:hover{
+    box-shadow: 0px 2px 20px rgba(100,100,100,0.4)
+}
+.span3-3{
+    font-size: 14px;
+    color: rgb(214, 214, 214);
+}
+.span3-4{
+    color: rgb(241, 144, 74);
+}
+.span3-5{
+    color: white;
+    font-size: 12px;
+}
+.span3-6{
+    padding-top: 225px;
+    color: white;
+}
+.span3-7{
+    color: rgb(81, 81, 81);
+    padding: 27px;
+    font-size: 16px;
+}
+.div3-8{
+    padding: 0 0 0;
+    margin: 0 auto;
+    /* 去除溢出部分 */
+    overflow: hidden;
+}
+.div3-8 img{
+    transition:0.8s ;
+}
+/* 图片缩放 */
+.div3-8 img:hover{
+    transform: scale(1.5);
+}
+.footer-left{
+    width: 175px;
+    height: 174px;
+    float: left;
+}
+.footer.left h3{
+    color: rgba(0, 0, 0, .8);
+    display:block;
+}
+.footer-left li {
+height: 30px;
+}
+.footer-left li a{
+    line-height: 33px;
+    text-decoration: none;
+    color: rgba(0, 0, 0, .6);
+}
+.footer-left li a:hover{
+    color: rgba(0, 0, 0, .3);
+}
+.footer-right{
+    text-align: right;
+    display: inline block;
+    float: right;
+}
+.onlive-btn {
+    height: 30px;
+    padding: 0 16px;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    line-height: 30px;
+    color: #fff;
+    border-radius: 20px;
+    margin-top: 3px;
+    display: inline-block;
+    font-size: 14px;
+    background: #008cff;
+}
+.footer-right p{
+    font-size: 28px;
+    color: rgba(0, 0, 0, .8);
+}
+.footer-right span{
+    font-size: 10px;
+    color: rgba(0, 0, 0, .6);
+    margin-bottom: 20px;
+}
+.div3-10{
+    clear: both;
+    padding: 0;
+}
+.span3-7{
+    padding-bottom:10px;
+    display: inline-block;
+    line-height: 20px;
+    color: rgb(202, 202, 202);
+}
+.a3-2{
+    position: relative;
+    margin-top: 10px;
+    display: inline-block;
+    font-size: 1em;
+    color: rgba(0,0,0,.35);
+    float: right;
+
+}
+.a3-2:hover .xia-5{
+    display: block;
+}
+.a3-2:hover{
+    color: rgba(0,0,0,.35);
+}
+.xia-5 {
+    display: none; 
+    
+    position: absolute;
+    top: -120px;
+    left: 38px;
+    width: 100px;
+    background-color: white;
+    border: 1px solid rgba(0,0,0,.35);
+}
+.xia-5 li{
+    display: block;
+    line-height: 30px;
+    font-size: 16px;
+
+}
+.div3-9 li{
+    float: left;
+}
+.a3-3{
+    color: rgba(0,0,0,.35);
+    padding:0 8px;
+    border-left: solid 1px ;
+}
+.a3-4{
+    color: rgba(0,0,0,.35);
+    padding-right: 8px ;
+}
+.a3-4:hover{
+    color: rgba(0,0,0,.35);
+}
+.a3-3:hover{
+    color: #008cff;
+}
+.li3-3{
+    text-decoration: none;
+}
+.li3-3:hover{
+    background-color: rgb(242, 242, 242);
+}
+/* 小三角 */
+.login3-1::after{
+    content: "";
+    display: none;
+    position: absolute;
+    width: 0;
+    height: 0;
+    border:8px solid transparent;
+    border-top: none;
+    border-bottom-color: whitesmoke;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+.login3-1:hover::after
+{
+display: block;
+}

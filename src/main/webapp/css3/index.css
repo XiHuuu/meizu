@@ -1,0 +1,128 @@
+/* 手机、Lipro、配件共用css */
+.brand-banner img{
+    height: 450px;
+    margin: 0 auto;
+    background-color: #f2f2f2;
+    /* background-repeat: no-repeat; */
+    /* background-size: cover; */
+}
+/* 右下角title */
+.title-right a{
+    position: relative;
+    font-size: 18px;
+    color: black;
+    line-height: 20px;
+    margin-right: 15px;
+    float: right;
+    width: 50px;
+    height: 20px;
+    text-decoration: none;
+}
+.title-right a:hover{
+    color: 008cff;
+    text-decoration: none;
+}
+.goodslist .items a{
+    transition: 0.5s;
+}
+.goodslist .items a:hover{
+    box-shadow: 0 10px 15px rgb(0,0,0,0.3);
+    text-decoration: none;
+}
+.goodslist .items img{
+    width: 320px;
+    height: 320px;
+    width: 80%;
+    margin: 0 auto;
+    
+}
+/* 每个商品li */
+.items{
+    position: relative;
+    float: left;
+    width: 408px;
+    height: 556px;
+    margin: 0 15px 15px 0;
+    background: #fff;
+    box-sizing: border-box;
+    transition: all .3s ease;
+}
+.items > a{
+    display: block;
+    padding-top: 40px;
+    padding-bottom: 28px;
+    height: 556px;
+    text-align: center;
+}
+
+.items-title{
+    font-size: 23px;
+    color: #333;
+    padding: 0 12px;
+    text-align: center;
+}
+.items-info{
+    text-align: center;
+    margin: 5px auto;
+    color: #666;
+    text-align: center;
+    min-height: 24px;
+    font-size: 16px;
+    font-weight: 300;
+    max-width: 270px;
+}
+.items-price{
+    text-align: center;
+    font-size: 28px;
+    color: #c00;
+}
+/* 手机比较img */
+.middle img{
+    width: 1300px;
+    height: 250px;
+    margin-left: -65px;
+
+}
+.middle-title{
+    text-align: left;
+    font-size: 24px;
+    color: #333;
+    font-weight: 400;
+    overflow: hidden;
+    margin-top: 90px;
+    margin-bottom: 25px;
+}
+/* 为你推荐 */
+.down{
+    width: 1300px;
+    height: 430px;
+    background-color: white;
+}
+.down .down-items{
+    width: 310px;
+    height: 430px;
+    background-color: white;
+    float: left;
+    list-style: none;
+    margin-left: 5px;
+    
+}
+.down .down-items a{
+    display: block;
+    text-align: center;
+    padding-top: 40px;
+    padding-bottom: 44px;
+    text-decoration: none;
+    /* margin-right: 20px; */
+    
+}
+.down img{
+    text-align: center;
+    width: 256px;
+    height: 256px;
+}
+/* 弹出动画 */
+.down-items:hover img {
+    transform-origin: 50% 50%;
+    transform: scale(1.1111);
+}

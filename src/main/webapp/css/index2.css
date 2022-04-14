@@ -1,0 +1,553 @@
+/* 顶部 */
+ul{
+    list-style: none;
+}
+
+.aa1{
+    width: 108px;
+    height: 21px;
+}
+
+.ab1{
+    font-size: 16.5px;
+    color: #3E3A39;
+}
+
+.ab1:hover{
+    color: #008CFF;
+    text-decoration: none;
+}
+
+.rows1{
+    padding-top: 20px
+}
+
+.ac1{
+    width: 331px;
+    height: 215px;
+    margin-left: 1050px;
+    margin-top: 170px;
+}
+
+.ad1{
+    width: 100%;
+}
+
+.ae1{
+    font-size: 55px;
+    color: #000000;
+}
+
+.af1{
+    font-size: 18px;
+    float: right;
+    padding-top: 20px;
+    padding-right: 15px;
+}
+
+.ag1{
+    width: 77.09px;
+    height: 27px;
+    margin-top: 100px;
+    margin-left: 230px;
+    text-align: center;
+    line-height: 27px;
+    color: #3F8CF7;
+    border: 1px solid #3F8CF7;
+    border-radius:30px;
+}
+
+.ag1:hover,.ce1:hover,.de1:hover,.df1:hover,.dg1:hover{
+    color: #FFFFFF;
+    background-color: #3F8CF7;
+}
+
+/* 企业客户 */
+.ba1{
+    width: 100%;
+    height: 200px;
+}
+
+.bb1{
+    font-size: 55px;
+    color: #000000;
+}
+
+.bc1{
+    width: 400px;
+    height: 200px;
+    margin-left: 150px;
+    margin-top: 150px;
+}
+
+/* 定制手机 */
+.ca1{
+    width: 100%;
+    height: 443px;
+    background: url(./top2.jpg);
+}
+
+.cb1{
+    width: 347px;
+    height: 250px;
+    margin-left: 150px;
+    padding-top: 150px;
+}
+
+.cc1{
+    font-size: 27.5px;
+}
+
+.cd1{
+    font-size: 13.7px;
+    margin-top: 33px;
+}
+
+.ce1{
+    width: 93px;
+    height: 27px;
+    margin-top: 100px;
+    text-align: center;
+    line-height: 27px;
+    color: #3F8CF7;
+    border: 1px solid #3F8CF7;
+    border-radius:30px;
+}
+
+/* 多图 */
+.da1{
+    width: 402px;
+    height: 618px;
+    border-radius:10px;
+    padding-top: 380px;
+    padding-left: 60px;
+}
+
+.db1{
+    width: 250px;
+    height: 220px;
+}
+
+.dc1{
+    font-size: 27.5px;
+    text-align: center;
+}
+
+.dd1{
+    font-size: 13.7px;
+    color: #898989;
+    margin-top: 20px;
+}
+
+.de1{
+    width: 93px;
+    height: 27px;
+    margin-top: 60px;
+    margin-left: 80px;
+    text-align: center;
+    line-height: 27px;
+    color: #3F8CF7;
+    border: 1px solid #3F8CF7;
+    border-radius:30px;  
+}
+
+.df1{
+    width: 93px;
+    height: 27px;
+    margin-top: 20px;
+    margin-left: 80px;
+    text-align: center;
+    line-height: 27px;
+    color: #3F8CF7;
+    border: 1px solid #3F8CF7;
+    border-radius:30px;
+}
+
+.dg1{
+    width: 93px;
+    height: 27px;
+    margin-top: 80px;
+    margin-left: 80px;
+    text-align: center;
+    line-height: 27px;
+    color: #3F8CF7;
+    border: 1px solid #3F8CF7;
+    border-radius:30px;
+}
+/* 定制 */
+.ea1{
+    padding-bottom: 72px;
+    margin-left: 20px;
+}
+/* 1-1 */
+.eb1-1{
+    width: 25px;
+    height: 25px;
+    background-image: url(./zuo1-1.png);
+    float: left;
+}
+
+.ec1{
+    float: left;
+    font-size: 19px;
+    margin-left: 15px;
+}
+
+.ea1:hover>.eb1-1{
+    background-image: url(./zuo1-2.png);
+}
+
+.ea1:hover{
+    color: #008CFF;
+}
+
+.ea1:hover>.ee1-1{
+    background-image: url(./zuo1-3.png);
+}
+
+.ee1-1{
+    width: 650px;
+    height: 427px;
+    float: right;
+    z-index: 99;
+    background-image: url(./zuo1-3.png);
+}
+/* 1-2 */
+.eb1-2{
+    width: 25px;
+    height: 25px;
+    background-image: url(./zuo2-1.png);
+    float: left;
+}
+
+.ea1:hover>.eb1-2{
+    background-image: url(./zuo2-2.png);
+}
+
+.ee1-2{
+    width: 650px;
+    height: 427px;
+    float: right;
+    position: absolute;
+    z-index: 999;
+    right: 15px;
+    top: 0px;
+}
+
+.ea1:hover>.ee1-2{
+    background-image: url(./zuo2-3.png);
+}
+/* 1-3 */
+.eb1-3{
+    width: 25px;
+    height: 25px;
+    background-image: url(./zuo3-1.png);
+    float: left;
+}
+
+.ea1:hover>.eb1-3{
+    background-image: url(./zuo3-2.png);
+}
+
+.ee1-3{
+    width: 650px;
+    height: 427px;
+    float: right;
+    position: absolute;
+    z-index: 999;
+    right: 15px;
+    top: 0px;
+}
+
+.ea1:hover>.ee1-3{
+    background-image: url(./zuo3-3.png);
+}
+/* 1-4 */
+.eb1-4{
+    width: 25px;
+    height: 25px;
+    background-image: url(./zuo4-1.png);
+    float: left;
+}
+
+.ea1:hover>.eb1-4{
+    background-image: url(./zuo4-2.png);
+}
+
+.ee1-4{
+    width: 650px;
+    height: 427px;
+    float: right;
+    position: absolute;
+    z-index: 999;
+    right: 15px;
+    top: 0px;
+}
+
+.ea1:hover>.ee1-4{
+    background-image: url(./zuo4-3.png);
+}
+/* 1-5 */
+.eb1-5{
+    width: 25px;
+    height: 25px;
+    background-image: url(./zuo5-1.png);
+    float: left;
+}
+
+.ea1:hover>.eb1-5{
+    background-image: url(./zuo5-2.png);
+}
+
+.ee1-5{
+    width: 650px;
+    height: 427px;
+    float: right;
+    position: absolute;
+    z-index: 999;
+    right: 15px;
+    top: 0px;
+}
+
+.ea1:hover>.ee1-5{
+    background-image: url(./zuo5-3.png);
+}
+/* 1-6 */
+.eb1-6{
+    width: 25px;
+    height: 25px;
+    background-image: url(./zuo6-1.png);
+    float: left;
+}
+
+.ea1:hover>.eb1-6{
+    background-image: url(./zuo6-2.png);
+}
+
+.ee1-6{
+    width: 650px;
+    height: 427px;
+    float: right;
+    position: absolute;
+    z-index: 999;
+    right: 15px;
+    top: 0px;
+}
+
+.ea1:hover>.ee1-6{
+    background-image: url(./zuo6-3.png);
+}
+
+
+
+.ef1{
+    width: 335px;
+    height: 433px;
+    background-color: #FFFFFF;
+    border-radius:10px;
+    float: left;
+}
+
+.eg1{
+    font-size: 27px;
+    width: 200px;
+    margin-top: 75px;
+    margin-left: 57px;
+}
+
+.eh1{
+    font-size: 16.5px;
+    width: 220px;
+    margin-top: 30px;
+    margin-left: 57px;
+}
+/* 联系我们 */
+.fa1{
+    font-size: 55px;
+    text-align: center;
+    color: #000000;
+    margin-top: 100px;
+}
+
+/* 1-1 */
+.fb1{
+    width: 155px;
+    height: 200px;
+    margin-top: 80px;
+    margin-left: 60px;
+    text-align: center;
+    float: left;
+}
+
+.fc1-1{
+    margin: 0 auto;
+    width: 66px;
+    height: 62px;
+    background-image: url(./bottom1-1.png);
+}
+
+.fd1{
+    font-size: 22px;
+    margin-top: 35px;
+    color: #202020;
+}
+
+.fb1:hover>.fc1-1{
+    background-image: url(./bottom1-2.png);
+}
+.fb1:hover>.fd1,
+.fb1:hover>.fe1,
+.ff1:hover>.fg1,
+.ff1:hover>.fh1,
+.fi1:hover>.fg1,
+.fi1:hover>.fh1,
+.fj1:hover>.fg1,
+.fj1:hover>.fh1,
+.fk1:hover>.fg1,
+.fk1:hover>.fh1{
+    color: #008CFF;
+}
+
+.fb1:hover~.ga1-1,
+.ff1:hover~.ga1-2,
+.fi1:hover~.ga1-3,
+.fj1:hover~.ga1-4,
+.fk1:hover~.ga1-5{
+    background-color: #008CFF;
+}
+
+/* 1-2 */
+.fc1-2{
+    margin: 0 auto;
+    width: 62px;
+    height: 62px;
+    background-image: url(./bottom2-1.png);
+}
+
+.fe1{
+    font-size: 19px;
+    color: #545454;
+    margin-top: 20px;
+}
+
+.ff1{
+    width: 260px;
+    height: 200px;
+    margin-top: 80px;
+    margin-left: 60px;
+    text-align: center;
+    float: left;
+}
+
+.fg1{
+    font-size: 22px;
+    margin-top: 35px;
+    color: #202020;
+}
+
+.fh1{
+    font-size: 19px;
+    margin-top: 20px;
+    color: #545454;
+}
+
+.ff1:hover>.fc1-2{
+    background-image: url(./bottom2-2.png);
+}
+
+/* 1-3 */
+.fc1-3{
+    margin: 0 auto;
+    width: 65px;
+    height: 62px;
+    background-image: url(./bottom3-1.png);
+}
+
+.fi1{
+    width: 190px;
+    height: 200px;
+    margin-top: 80px;
+    margin-left: 60px;
+    text-align: center;
+    float: left;
+}
+
+.fi1:hover>.fc1-3{
+    background-image: url(./bottom3-2.png);
+}
+/* 1-4 */
+.fc1-4{
+    margin: 0 auto;
+    width: 80px;
+    height: 62px;
+    background-image: url(./bottom4-1.png);
+}
+
+.fj1{
+    width: 156px;
+    height: 200px;
+    margin-top: 80px;
+    margin-left: 60px;
+    text-align: center;
+    float: left;
+}
+
+.fj1:hover>.fc1-4{
+    background-image: url(./bottom4-2.png);
+}
+
+/* 1-5 */
+.fc1-5{
+    margin: 0 auto;
+    width: 55px;
+    height: 62px;
+    background-image: url(./bottom5-1.png);
+}
+
+.fk1{
+    width: 211px;
+    height: 200px;
+    margin-top: 80px;
+    margin-left: 60px;
+    text-align: center;
+    float: left;
+
+}
+
+.fk1:hover>.fc1-5{
+    background-image: url(./bottom5-2.png);
+}
+/* 底部 */
+.ga1-1{
+    width: 66px;
+    height: 5px;
+    background-color: #DCDDDD;
+    margin-left: 105px;
+    margin-top: 50px;
+    margin-bottom: 300px;
+    float: left;
+}
+
+.gb1{
+    width: 210px;
+    height: 2.2px;
+    margin-top: 51px;
+    background-color: #DCDDDD;
+    float: left;
+}
+
+.ga1-2,.ga1-3,.ga1-4,.ga1-5{
+    width: 66px;
+    height: 5px;
+    background-color: #DCDDDD;
+    margin-top: 50px;
+    float: left;
+}
+
+.gd1{
+    width: 170px;
+    height: 2.2px;
+    margin-top: 51px;
+    background-color: #DCDDDD;
+    float: left;
+}
