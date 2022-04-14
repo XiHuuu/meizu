@@ -10,6 +10,15 @@
     <link rel="shortcut icon" href="img/img4/biaotu.ico" type="image/x-icon">
     <link rel="stylesheet" href="./css/index9.css">
     <link rel="stylesheet" href="./css/bootstrap.css">
+    <script src="./js/jquery-1.10.1.min.js"></script>
+    <script src="./js/bootstrap.js"></script>
+    <script>
+        $(document).ready(function (){
+            $('#code_img').click(function (){
+                this.src = "${pageContext.request.contextPath}/kaptcha.jpg?d=" + new Date();
+            });
+        });
+    </script>
 </head>
 <body>
 
@@ -41,36 +50,41 @@
                     </a>
                 </h3>
                 <div class="row8">
-                    <div class="col-lg-12"  >
+                    <div class="col-lg-8"  >
                         <div class="input-group input-group-lg" >
-                            <div class="input-group-btn">
-                                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">+86<span class="caret"></span></button>
-                                <ul class="dropdown-menu">
-                                    <li><a href="#">常用</a></li>
-                                    <li><a href="#">中国  +86</a></li>
-                                    <li><a href="#">中国台湾  +886</a></li>
-                                    <li><a href="#">中国香港  +852</a></li>
-                                    <li><a href="#">Brazil +55</a></li>
-                                </ul>
-                            </div>
-                            <input type="text" class="form-control" aria-label="..."placeholder="电话号码">
+<%--                            <div class="input-group-btn">--%>
+<%--                                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">+86<span class="caret"></span></button>--%>
+<%--                                <ul class="dropdown-menu">--%>
+<%--                                    <li><a href="#">常用</a></li>--%>
+<%--                                    <li><a href="#">中国  +86</a></li>--%>
+<%--                                    <li><a href="#">中国台湾  +886</a></li>--%>
+<%--                                    <li><a href="#">中国香港  +852</a></li>--%>
+<%--                                    <li><a href="#">Brazil +55</a></li>--%>
+<%--                                </ul>--%>
+<%--                            </div>--%>
+                            <form>
+                                <input name="username" type="text" class="form-control" aria-label="..."placeholder="用户账号">
+                                <input name="password" type="password" class="form-control" aria-label="..."placeholder="用户密码">
+                                <input style="width: 100px;margin-bottom: 30px;margin-right: 20px" type="text" placeholder="验证码" name="code"><img style="width: 100px;height: 30px" id="code_img" alt="" src="${pageContext.request.contextPath}/kaptcha.jpg">
+                                <button type="submit" class="btn btn-primary btn-lg">   立即注册     </button>
+                            </form>
                         </div>
 
                     </div>
                 </div>
 
 
-                <div class="row9">
-                    <div class="col-lg-12">
-                        <div class="input-group input-group-lg">
-                        <span class="input-group-btn">
-                          <button class="btn btn-default" type="button"><a><img src="./img/img2.html/yanzheng.png"></a></button>
-                        </span>
-                            <input type="text" class="form-control"  placeholder="点击按钮进行验证">
+<%--                <div class="row9">--%>
+<%--                    <div class="col-lg-12">--%>
+<%--                        <div class="input-group input-group-lg">--%>
+<%--                        <span class="input-group-btn">--%>
+<%--                          <button class="btn btn-default" type="button"><a><img src="./img/img2.html/yanzheng.png"></a></button>--%>
+<%--                        </span>--%>
+<%--                            <input type="text" class="form-control"  placeholder="点击按钮进行验证">--%>
 
-                        </div>
-                    </div>
-                </div>
+<%--                        </div>--%>
+<%--                    </div>--%>
+<%--                </div>--%>
 
                 <div class="row">
                     <div class="col-lg-12">
@@ -85,14 +99,14 @@
 
 
 
-                <div class="row4">
-                    <div class="col-lg-12">
-                        <p>
-                            <button type="button" class="btn btn-primary btn-lg">   立即注册     </button>
+<%--                <div class="row4">--%>
+<%--                    <div class="col-lg-12">--%>
+<%--                        <p>--%>
+<%--                            <button type="button" class="btn btn-primary btn-lg">   立即注册     </button>--%>
 
-                        </p>
-                    </div>
-                </div>
+<%--                        </p>--%>
+<%--                    </div>--%>
+<%--                </div>--%>
 
                 <div class="row">
                     <div class="col-lg-12">
@@ -156,6 +170,5 @@
     </div>
 </div>
 
-<script src="./js/jquery-1.10.1.js"></script>
-<script src="./js/bootstrap.js"></script>
+
 </body>
