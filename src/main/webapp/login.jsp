@@ -1,17 +1,18 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<!doctype html>
-<html lang="zh-CN">
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<html>
 <head>
+    <% String path = request.getContextPath();%>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
     <title>登录-魅族官网</title>
-    <link rel="shortcut icon" href="img/img4/biaotu.ico" type="image/x-icon">
-    <link rel="stylesheet" href="./css/index9.css">
-    <link rel="stylesheet" href="./css/bootstrap.css">
-    <script src="js/jquery-1.10.1.min.js"></script>
-    <script src="js/bootstrap.js"></script>
+    <link rel="shortcut icon" href="<%=path%>/img/img4/biaotu.ico" type="image/x-icon">
+    <link rel="stylesheet" href="<%=path%>/css/index9.css">
+    <link rel="stylesheet" href="<%=path%>/css/bootstrap.css">
+    <script src="<%=path%>/js/jquery-1.10.1.min.js"></script>
+    <script src="<%=path%>/js/bootstrap.js"></script>
     <script>
         $(document).ready(function (){
             $('#code_img').click(function (){
@@ -26,8 +27,8 @@
 <div class="container-fluid">
     <div class="row">
         <div class="col-md-12">
-            <a href="./index.jsp">
-                <img src="./img/img2.html/S9YEA8AE`RP550TC`4EJ_68.png" width="160px" height="68px">
+            <a href="${pageContext.request.contextPath}/phone/getPhones?url=index">
+                <img src="<%=path%>/img/img2.html/S9YEA8AE`RP550TC`4EJ_68.png" width="160px" height="68px">
             </a>
         </div>
     </div>
@@ -49,13 +50,13 @@
                 <h3 class="opp">
                     <a href="">
                         <div class="wuo" style="float: right; margin-top: -41px; ">
-                            <img src="./img/img2.html/KTEL$R]R7MW{N1K{EU3XIG4.jpg">
+                            <img src="<%=path%>/img/img2.html/KTEL$R]R7MW{N1K{EU3XIG4.jpg">
                         </div>
                     </a>
 
 
                     <a href="" style="text-decoration: none;">
-                        验证码登录
+                        登录
                     </a>
                 </h3>
                 <div class="row8">
@@ -96,7 +97,7 @@
 
                 <div class="row">
                     <div class="col-lg-12">
-                        <a href="./register.jsp" style="text-decoration: none; float: left;">注册</a>
+                        <a href="<%=path%>/register.jsp" style="text-decoration: none; float: left;">注册</a>
 
 
                         <a href="" style="text-decoration: none; float: left; padding-left: 300px;" >忘记密码</a>

@@ -59,7 +59,7 @@ public class UserController {
     }
 
     @RequestMapping("login")
-    public String login(User user, Model model, HttpServletRequest req , HttpServletResponse resp,String code) throws ServletException, IOException {
+    public String login(User user, Model model, HttpServletRequest req ,String code) throws ServletException, IOException {
         String token= (String)req.getSession().getAttribute(KAPTCHA_SESSION_KEY);
         req.getSession().removeAttribute(KAPTCHA_SESSION_KEY);
         if (!(token != null && token.equalsIgnoreCase(code))){
