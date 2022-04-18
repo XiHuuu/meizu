@@ -1,0 +1,11 @@
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.it.mz.mapper.PhoneMapper">
+    <select id="getPhones" resultType="com.it.mz.pojo.Phone">
+        select * from phone
+    </select>
+    <select id="getPhoneById" resultType="com.it.mz.pojo.Phone">
+        select * from phone where id=#{id}
+    </select>
+</mapper>
