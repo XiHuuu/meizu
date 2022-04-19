@@ -73,7 +73,7 @@ public class UserController {
             return "/error.jsp";
         }else {
             HttpSession session = req.getSession();
-            session.setAttribute("user",user);
+            session.setAttribute("user",u);
             return "redirect:/index.jsp";
         }
     }
@@ -90,4 +90,9 @@ public class UserController {
         return "redirect:/login.jsp";
     }
 
+    @RequestMapping("exit")
+    public String exit(HttpServletRequest req){
+        req.getSession().invalidate();
+        return "/phone/getPhones?url=index";
+    }
 }

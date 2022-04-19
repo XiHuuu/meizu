@@ -1,17 +1,15 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <% String path = request.getContextPath();%>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>购物车</title>
+    <title>魅族官网-魅族 18 系列手机：独具热爱，自成一派</title>
     <link rel="shortcut icon" href="<%=path%>/img/img4/biaotu.ico" type="image/x-icon">
-    <link rel="stylesheet" href="<%=path%>/css3/index.css">
-    <link rel="stylesheet" href="<%=path%>/css3/bootstrap.css">
-    <link rel="stylesheet" href="<%=path%>/css/index3-1.css">
+    <link rel="stylesheet" href="<%=path%>/css/bootstrap.css">
+    <link rel="stylesheet" href="<%=path%>/css/index3.css">
     <script src="<%=path%>/js/jquery-1.10.1.min.js"></script>
 </head>
 <body>
@@ -19,35 +17,12 @@
     // 声明创建的jquery的匿名函数,执行到浏览器窗口,会自动加载当前函数
     $(function() {//function=函数
         // load("具体加载的内容"):加载
-        <%--$(".top").load("<%=path%>/header.jsp");--%>
         $(".tops").load("<%=path%>/meizu-footer.jsp");
-
-        // 给 【删除】绑定单击事件
-        $("a.deleteItem").click(function () {
-            return confirm("你确定要删除【" + $(this).parent().parent().find("td:first").text() +"】吗?")
-        });
-        // 给清空购物车绑定单击事件
-        $("#clearCart").click(function () {
-            return confirm("你确定要清空购物车吗?");
-        })
-        // 给输入框绑定 onchange内容发生改变事件
-        $(".updateCount").change(function () {
-            // 获取商品名称
-            var name = $(this).parent().parent().find("td:first").text();
-            var id = $(this).attr('bookId');
-            // 获取商品数量
-            var count = this.value;
-            if ( confirm("你确定要将【" + name + "】商品修改数量为：" + count + " 吗?") ) {
-                //发起请求。给服务器保存修改
-                location.href = "${pageContext.request.contextPath}/cart/updateCount?count="+count+"&id="+id;
-            } else {
-                // defaultValue属性是表单项Dom对象的属性。它表示默认的value属性值。
-                this.value = this.defaultValue;
-            }
-        });
     })
 </script>
-    <nav>
+
+<!-- 导航栏外部容器 -->
+<nav>
     <div class="container-fluid div3-1">
         <!-- logo -->
         <div class="div3-2">
@@ -58,7 +33,7 @@
         <ul>
             <li class="li3-1">
                 <!--target=_blank用一个新网页打开超链接  -->
-                <a href="${pageContext.request.contextPath}/phone/getPhones?url=phone" target=_blank >手机</a>
+                <a href="${pageContext.request.contextPath}/phone/getPhones?url=phone">手机</a>
                 <!-- 下拉栏 -->
                 <div class="xia">
                     <div class="container-fluid">
@@ -77,7 +52,7 @@
                 </div>
             </li>
             <li  class="li3-1">
-                <a href="<%=path%>/lipro.jsp" target=_blank>Lipro</a>
+                <a href="<%=path%>/lipro.jsp" >Lipro</a>
                 <!-- 下拉栏 -->
                 <div class="xia">
                     <div class="container-fluid">
@@ -143,7 +118,7 @@
                 </div>
             </li >
             <li  class="li3-1">
-                <a href="<%=path%>/acoustics.jsp" target=_blank>声学</a>
+                <a href="<%=path%>/acoustics.jsp" >声学</a>
                 <!-- 下拉栏 -->
                 <div class="xia">
                     <div class="container-fluid">
@@ -209,7 +184,7 @@
                 </div>
             </li>
             <li  class="li3-1">
-                <a href="<%=path%>/peijian.jsp" target=_blank>配件</a>
+                <a href="<%=path%>/peijian.jsp" >配件</a>
                 <!-- 下拉栏 -->
                 <div class="xia">
                     <div class="container-fluid">
@@ -275,7 +250,7 @@
                 </div>
             </li>
             <li  class="li3-1">
-                <a href="<%=path%>/shenghuo.jsp" target=_blank>生活</a>
+                <a href="<%=path%>/shenghuo.jsp" >生活</a>
                 <!-- 下拉栏 -->
                 <div class="xia">
                     <div class="container-fluid">
@@ -334,19 +309,19 @@
                 </div>
             </li>
             <li  class="li3-1">
-                <a href="<%=path%>/Flyme.jsp" target=_blank>Flyme</a>
+                <a href="<%=path%>/Flyme.jsp" >Flyme</a>
             </li>
             <li  class="li3-1">
-                <a href="<%=path%>/fuwu.jsp" target=_blank>服务</a>
+                <a href="<%=path%>/fuwu.jsp" >服务</a>
             </li>
             <li  class="li3-1">
-                <a href="<%=path%>/zhuanmaidian.jsp" target=_blank>专卖店</a>
+                <a href="<%=path%>/zhuanmaidian.jsp" >专卖店</a>
             </li>
             <li  class="li3-1">
-                <a href="<%=path%>/shequ.jsp" target=_blank>社区</a>
+                <a href="<%=path%>/shequ.jsp" >社区</a>
             </li>
             <li  class="li3-1">
-                <a href="<%=path%>/qiyefuwu.jsp" target=_blank>企业服务</a>
+                <a href="<%=path%>/qiyefuwu.jsp" >企业服务</a>
             </li>
             <li  class="li3-1">
                 <a href="">App下载</a>
@@ -373,9 +348,9 @@
                 <div class="xia-3">
                     <c:if test="${user != null}"><a href="${pageContext.request.contextPath}/user/exit">用户名:${user.username} 注销</a></c:if>
                     <c:if test="${user == null}"><a href="<%=path%>/login.jsp" >立即登录</a></c:if>
-                    <a href="<%=path%>/register.jsp" target=_blank>立即注册</a>
-                    <a href="${pageContext.request.contextPath}/order/getOrders" target=_blank>我的订单</a>
-                    <a href="<%=path%>/mma.jsp" target=_blank style="padding-left: 30px;">M码通道</a>
+                    <a href="<%=path%>/register.jsp" >立即注册</a>
+                    <a href="${pageContext.request.contextPath}/order/getOrders" >我的订单</a>
+                    <a href="<%=path%>/mma.jsp"  style="padding-left: 30px;">M码通道</a>
                 </div>
             </a>
         </div>
@@ -399,34 +374,36 @@
 <div style="margin-left: 350px">
     <table border="1" cellspacing="0" style="text-align: center;width: 1000px">
         <tr>
-            <td>商品名称</td>
-            <td>图片</td>
-            <td>数量</td>
-            <td>单价</td>
-            <td>小计</td>
-            <td>操作</td>
+            <td>订单编号</td>
+            <td>日期</td>
+            <td>金额</td>
+            <td>状态</td>
+            <td>详情</td>
         </tr>
-        <c:forEach items="${cart.list}" var="entry">
-        <tr>
-            <td>${entry.phone.name}</td>
-            <td><img style="width: 100px;height: 150px" src="<%=path%>/img/img4/${entry.phone.img}.png"></td>
-            <td>
-                <input class="updateCount" style="width: 80px;"
-                       bookId="${entry.phone.id}"
-                       type="text" value="${entry.count}">
-            </td>
-            <td>${entry.phone.price}</td>
-            <td>${entry.subTotal}</td>
-            <td><a class="deleteItem" href="${pageContext.request.contextPath}/cart/deleteCartItem?id=${entry.phone.id}">删除</a></td>
-        </tr>
+        <c:forEach items="${orders}" var="order">
+                <tr>
+                    <td>${order.order_Id}</td>
+                    <td>${order.create_time}</td>
+                    <td>${order.price}</td>
+                    <td>
+                        <c:if test="${order.status eq 0}">
+                            未付款
+                        </c:if>
+                        <c:if test="${order.status eq 1}">
+                            已付款
+                        </c:if>
+                    </td>
+                    <td>
+                        <c:if test="${order.status eq 0}">
+                            <a style="color: orange" href="${pageContext.request.contextPath}/order/payment?order_id=${order.order_Id}">去付款</a>
+                        </c:if>
+                        <c:if test="${order.status eq 1}">
+                            查看详情
+                        </c:if>
+                    </td>
+                </tr>
         </c:forEach>
     </table>
-    <div style="margin-left: 250px;margin-top: 50px">
-        <span style="margin-left: 30px">购物车中共有<span style="size: 15px;color: orange">${cart.totalCount}</span>件商品</span>
-        <span style="margin-left: 30px">总金额<span style="size: 15px;color: orange">${cart.totalPrice}</span>元</span>
-        <span style="margin-left: 30px"><a id="clearCart" href="${pageContext.request.contextPath}/cart/clearCart">清空购物车</a></span>
-        <span style="margin-left: 30px"><a href="${pageContext.request.contextPath}/order/addOrder">提交订单</a></span>
-    </div>
 </div>
 
 <div style="margin-top: 300px" class="tops"></div>

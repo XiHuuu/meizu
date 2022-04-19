@@ -349,23 +349,27 @@
                     <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
                     <!-- 下拉栏 -->
                     <div class="xia-3">
-                        <a href="<%=path%>/login.jsp" target=_blank>立即登录</a>
+                        <c:if test="${user != null}"><a href="${pageContext.request.contextPath}/user/exit">用户名:${user.username} 注销</a></c:if>
+                        <c:if test="${user == null}"><a href="<%=path%>/login.jsp" >立即登录</a></c:if>
                         <a href="<%=path%>/register.jsp" target=_blank>立即注册</a>
-                        <a href="" target=_blank>我的订单</a>
+                        <a href="${pageContext.request.contextPath}/order/getOrders" target=_blank>我的订单</a>
                         <a href="<%=path%>/mma.jsp" target=_blank style="padding-left: 30px;">M码通道</a>
                     </div>
                 </a>
             </div>
             <div class="navbar-header div3-4" style="margin-top: 13px;">
-                <a class="navbar-brand login3-1" href="#">
+                <a class="navbar-brand login3-1" href="<c:if test="${user != null}"><%=path%>/cart.jsp</c:if>  <c:if test="${user == null}"><%=path%>/login.jsp</c:if>">
                     <span class="glyphicon glyphicon-shopping-cart " aria-hidden="true"></span>
                     <!-- 下拉栏 -->
                     <div class="xia-4">
-                        <span class="span3-8" >登录后可显示</span>
-                        <span class="span3-8">您账号中已加入的商品哦~</span>
+                        <c:if test="${user == null}">
+                            <span class="span3-8" >登录后可显示</span>
+                        </c:if>
+                        <c:if test="${user != null}">
+                            <span class="span3-8">您账号中已加入的商品哦~</span>
+                        </c:if>
                     </div>
                 </a>
-
             </div>
         </div>
     </nav>
