@@ -4,12 +4,21 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 <mapper namespace="com.it.mz.mapper.OrderMapper">
 
     <insert id="addOrder">
-        insert into `order` (order_id,create_time,price,status,user_id) values (#{order_Id},#{create_time},#{price},#{status},#{user_id})
+        insert into `order` (order_id,create_time,price,status,user_id) values (#{order_id},#{create_time},#{price},#{status},#{user_id})
     </insert>
+    <delete id="deleteOrder">
+        delete from `order` where order_id=#{order_id}
+    </delete>
     <select id="getOrderById" resultType="com.it.mz.pojo.Order">
         select * from `order` where user_id=#{id}
     </select>
+    <select id="getOrderByOrderId" resultType="com.it.mz.pojo.Order">
+        select * from `order` where order_id=#{order_id}
+    </select>
     <update id="updateStatus">
         update `order` set status=#{param2} where order_id=#{param1}
+    </update>
+    <update id="updatePrice">
+        update `order` set price=#{price} where order_Id=#{order_id}
     </update>
 </mapper>

@@ -2,6 +2,7 @@ package com.it.mz.controller;
 
 import com.it.mz.pojo.Cart;
 import com.it.mz.pojo.Order;
+import com.it.mz.pojo.OrderItem;
 import com.it.mz.pojo.User;
 import com.it.mz.service.OrderService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -46,4 +47,26 @@ public class OrderController {
         orderService.updateStatus(order_id,1);
         return "redirect:/order/getOrders";
     }
+
+    @RequestMapping("deleteOrder")
+    public String deleteOrder(String order_id){
+        orderService.deleteOrder(order_id);
+        return "redirect:/order/getOrders";
+    }
+
+    @RequestMapping("getOrderItems")
+    public String getOrderItems(Model model,String order_id){
+        List<OrderItem> list = orderService.getOrderItems(order_id);
+        Order order = orderService.getOrderByOrderId(order_id);
+        model.addAttribute("orderItems",list);
+        model.addAttribute("order",order);
+        return "/order-item.jsp";
+    }
+
+//    @RequestMapping("deleteOrderItemById")
+//    public String deleteOrderItemById(int id,Order order){
+//        orderService.deleteOrderItemById(id);
+//        orderService.updatePrice(order);
+//        return "redirect:/order/getOrderItems?order_id="+order.getOrder_id();
+//    }
 }

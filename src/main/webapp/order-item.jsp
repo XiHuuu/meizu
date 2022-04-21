@@ -374,38 +374,32 @@
 <div style="margin-left: 350px">
     <table border="1" cellspacing="0" style="text-align: center;width: 1000px">
         <tr>
-            <td>订单编号</td>
-            <td>日期</td>
-            <td>金额</td>
-            <td>状态</td>
-            <td>详情</td>
-            <td colspan="2">操作</td>
+            <td>商品名字</td>
+            <td>商品图片</td>
+            <td>商品数量</td>
+            <td>商品价格</td>
+            <td>小计</td>
+<%--            <c:if test="${order.status == 0}">--%>
+<%--            <td>操作</td>--%>
+<%--            </c:if>--%>
         </tr>
-        <c:forEach items="${orders}" var="order">
-                <tr>
-                    <td>${order.order_id}</td>
-                    <td>${order.create_time}</td>
-                    <td>${order.price}</td>
-                    <td>
-                        <c:if test="${order.status eq 0}">
-                            未付款
-                        </c:if>
-                        <c:if test="${order.status eq 1}">
-                            已付款
-                        </c:if>
-                    </td>
-                    <td>
-                        <a href="${pageContext.request.contextPath}/order/getOrderItems?order_id=${order.order_id}">查看详情</a>
-                    </td>
-                    <td colspan="2">
-                        <c:if test="${order.status eq 0}">
-                            <a style="color: orange" href="${pageContext.request.contextPath}/order/payment?order_id=${order.order_id}">去付款</a>
-                        </c:if>
-                        <a href="${pageContext.request.contextPath}/order/deleteOrder?order_id=${order.order_id}">删除</a>
-                    </td>
-                </tr>
+        <c:forEach items="${orderItems}" var="orderItem">
+            <tr>
+                <td>${orderItem.name}</td>
+                <td><img style="width: 100px;height: 150px" src="<%=path%>/img/img4/${orderItem.img}.png"></td>
+                <td>${orderItem.count}</td>
+                <td>${orderItem.price}</td>
+                <td>${orderItem.total_price}</td>
+<%--                <c:if test="${order.status == 0}">--%>
+<%--                <td><a href="${pageContext.request.contextPath}/order/deleteOrderItemById?id=${orderItem.id}&order_id=${orderItem.order_id}">删除</a></td>--%>
+<%--                </c:if>--%>
+            </tr>
         </c:forEach>
     </table>
+    <div style="margin-left: 250px;margin-top: 50px">
+        <span style="margin-left: 30px">总金额<font style="size: 15px;color: orange">${order.price}</font>元</span>
+        <a style="margin-left: 30px" href="${pageContext.request.contextPath}/order/payment?order_id=${order.order_id}">去付款</a>
+    </div>
 </div>
 
 <div style="margin-top: 300px" class="tops"></div>

@@ -1,7 +1,7 @@
 package com.it.mz.pojo;
 
 public class Order {
-    private String order_Id;
+    private String order_id;
     private String create_time;
     private double price;
     private int status=0;
@@ -10,20 +10,20 @@ public class Order {
     public Order() {
     }
 
-    public Order(String order_Id, String create_time, double price, int status, int user_id) {
-        this.order_Id = order_Id;
+    public Order(String order_id, String create_time, double price, int status, int user_id) {
+        this.order_id = order_id;
         this.create_time = create_time;
         this.price = price;
         this.status = status;
         this.user_id = user_id;
     }
 
-    public String getOrder_Id() {
-        return order_Id;
+    public String getOrder_id() {
+        return order_id;
     }
 
-    public void setOrder_Id(String order_Id) {
-        this.order_Id = order_Id;
+    public void setOrder_id(String order_id) {
+        this.order_id = order_id;
     }
 
     public String getCreate_time() {
@@ -61,7 +61,7 @@ public class Order {
     @Override
     public String toString() {
         return "Order{" +
-                "order_Id='" + order_Id + '\'' +
+                "order_Id='" + order_id + '\'' +
                 ", create_time='" + create_time + '\'' +
                 ", price=" + price +
                 ", status=" + status +

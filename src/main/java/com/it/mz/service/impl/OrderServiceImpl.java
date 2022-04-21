@@ -29,7 +29,7 @@ public class OrderServiceImpl implements OrderService {
         List<CartItem> list = cart.getList();
         for (int i = 0; i < list.size(); i++) {
             CartItem cartItem = list.get(i);
-            OrderItem orderItem = new OrderItem(null, cartItem.getPhone().getName(), cartItem.getCount(), cartItem.getPhone().getPrice(), cartItem.getSubTotal(), orderId);
+            OrderItem orderItem = new OrderItem(null, cartItem.getPhone().getName(),cartItem.getPhone().getImg(), cartItem.getCount(), cartItem.getPhone().getPrice(), cartItem.getSubTotal(), orderId);
             orderItemMapper.addOrderItem(orderItem);
         }
         cart.clearCart();
@@ -44,5 +44,37 @@ public class OrderServiceImpl implements OrderService {
     @Override
     public void updateStatus(String order_id, int status) {
         orderMapper.updateStatus(order_id, status);
+    }
+
+    @Override
+    public void deleteOrder(String order_id) {
+        orderMapper.deleteOrder(order_id);
+        orderItemMapper.deleteOrderItem(order_id);
+    }
+
+    @Override
+    public List<OrderItem> getOrderItems(String order_id) {
+        return orderItemMapper.getOrderItems(order_id);
+    }
+
+    @Override
+    public void deleteOrderItemById(int id) {
+        orderItemMapper.deleteOrderItemById(id);
+    }
+
+    @Override
+    public void updatePrice(Order order) {
+        List<OrderItem> list = orderItemMapper.getOrderItems(order.getOrder_id());
+        double total_price = 0;
+        for (int i = 0; i < list.size(); i++) {
+            total_price += list.get(i).getTotal_price();
+        }
+        order.setPrice(total_price);
+        orderMapper.updatePrice(order);
+    }
+
+    @Override
+    public Order getOrderByOrderId(String order_id) {
+        return orderMapper.getOrderByOrderId(order_id);
     }
 }
