@@ -44,7 +44,7 @@
                                 <c:forEach items="${list}" var="phone">
                                     <li class="li3-2">
                                         <a href="${pageContext.request.contextPath}/phone/getPhoneById?id=${phone.id}">
-                                            <img src="<%=path%>/img/img4/${phone.img}.png" alt="">
+                                            <img src="<%=path%>/img/img4/${phone.img}" alt="">
                                             <p>${phone.name}</p>
                                             <p>￥${phone.price}</p>
                                         </a>
@@ -353,7 +353,7 @@
                         <c:if test="${user == null}"><a href="<%=path%>/login.jsp" >立即登录</a></c:if>
                         <a href="<%=path%>/register.jsp" target=_blank>立即注册</a>
                         <a href="${pageContext.request.contextPath}/order/getOrders" target=_blank>我的订单</a>
-                        <a href="<%=path%>/mma.jsp" target=_blank style="padding-left: 30px;">M码通道</a>
+                        <a href="${pageContext.request.contextPath}/phone/manage"  style="padding-left: 30px;">手机管理</a>
                     </div>
                 </a>
             </div>

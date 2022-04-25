@@ -76,7 +76,8 @@
                                 <input name="username" type="text" class="form-control" aria-label="..."placeholder="用户账号">
                                 <input name="password" type="password" class="form-control" aria-label="..."placeholder="用户密码">
                                 <input style="width: 100px;margin-bottom: 30px;margin-right: 20px" type="text" placeholder="验证码" name="code"><img style="width: 100px;height: 30px" id="code_img" alt="" src="${pageContext.request.contextPath}/kaptcha.jpg">
-                                <button type="submit" class="btn btn-primary btn-lg" style="width: 100px;margin-top: 20px;">   登录    </button>
+                                &nbsp;&nbsp;&nbsp;<input name="auto" type="checkbox" value="true"/>自动登录
+                                &nbsp;&nbsp;&nbsp;<button type="submit" class="btn btn-primary btn-lg" style="width: 100px;margin-top: 20px;">   登录    </button>
                             </form>
                         </div>
 

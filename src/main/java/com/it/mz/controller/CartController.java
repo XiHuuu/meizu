@@ -3,6 +3,7 @@ package com.it.mz.controller;
 import com.it.mz.pojo.Cart;
 import com.it.mz.pojo.CartItem;
 import com.it.mz.pojo.Phone;
+import com.it.mz.pojo.User;
 import com.it.mz.service.PhoneService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -20,6 +21,10 @@ public class CartController {
 
     @RequestMapping("addCart")
     public String addCart(int id, HttpServletRequest req,Model model){
+        User user = (User)req.getSession().getAttribute("user");
+        if (user == null){
+            return "redirect:/login.jsp";
+        }
         Cart cart = (Cart)req.getSession().getAttribute("cart");
         if (cart == null){
             cart = new Cart();
@@ -57,4 +62,5 @@ public class CartController {
         cart.updateCount(id,count);
         return "/cart.jsp";
     }
+
 }

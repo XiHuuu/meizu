@@ -2,11 +2,13 @@ package com.it.mz.test;
 
 import com.it.mz.pojo.User;
 import com.it.mz.service.UserService;
+import com.it.mz.utils.JedisPoolUtils;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+import redis.clients.jedis.Jedis;
 
 import java.util.List;
 
@@ -45,5 +47,12 @@ public class test {
     public void testGetUserById(){
         User user = userService.getUserById(4);
         System.out.println(user);
+    }
+
+    @Test
+    public void testRedis(){
+        Jedis jedis = JedisPoolUtils.getJedis();
+        System.out.println(jedis.get("username"));
+        JedisPoolUtils.releaseJedis(jedis);
     }
 }

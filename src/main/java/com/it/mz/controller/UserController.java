@@ -8,6 +8,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import javax.servlet.ServletException;
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
@@ -59,7 +60,7 @@ public class UserController {
     }
 
     @RequestMapping("login")
-    public String login(User user, Model model, HttpServletRequest req ,String code) throws ServletException, IOException {
+    public String login(User user, Model model, HttpServletRequest req ,HttpServletResponse resp,String code,Boolean auto) throws ServletException, IOException {
         String token= (String)req.getSession().getAttribute(KAPTCHA_SESSION_KEY);
         req.getSession().removeAttribute(KAPTCHA_SESSION_KEY);
         if (!(token != null && token.equalsIgnoreCase(code))){
@@ -72,6 +73,14 @@ public class UserController {
             model.addAttribute("msg","您输入的用户名或密码错误");
             return "/error.jsp";
         }else {
+            System.out.println(auto);
+            if (auto){
+                Cookie cookie = new Cookie("user", u.getUsername() + "==" + u.getPassword());
+                cookie.setMaxAge(7*24*60*60);
+                cookie.setPath("/meizu");
+                System.out.println(cookie);
+                resp.addCookie(cookie);
+            }
             HttpSession session = req.getSession();
             session.setAttribute("user",u);
             return "redirect:/index.jsp";

@@ -6,6 +6,8 @@ import com.it.mz.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 import java.util.List;
 
 @Service
@@ -40,5 +42,14 @@ public class UserServiceImpl implements UserService {
     @Override
     public User getUserByNameAndPwd(String username, String password) {
         return userMapper.getUserByNameAndPwd(username,password);
+    }
+
+    @Override
+    public void autoLogin(User user, HttpServletRequest req, HttpSession session) {
+        User u = userMapper.getUserByNameAndPwd(user.getUsername(), user.getPassword());
+        System.out.println( "user ==" + u );
+        if (u != null){
+            session.setAttribute("user",u);
+        }
     }
 }
