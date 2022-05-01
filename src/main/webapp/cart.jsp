@@ -409,7 +409,7 @@
         <c:forEach items="${cart.list}" var="entry">
         <tr>
             <td>${entry.phone.name}</td>
-            <td><img style="width: 100px;height: 150px" src="<%=path%>/img/img4/${entry.phone.img}.png"></td>
+            <td><img style="width: 100px;height: 150px" src="<%=path%>/img/img4/${entry.phone.img}"></td>
             <td>
                 <input class="updateCount" style="width: 80px;"
                        bookId="${entry.phone.id}"

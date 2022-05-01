@@ -398,7 +398,7 @@
                     <c:forEach items="${list}" var="phone">
                     <li class="items">
                         <a href="${pageContext.request.contextPath}/phone/getPhoneById?id=${phone.id}" class="items-link">
-                            <img src="<%=path%>/img/img4/${phone.img}.png" >
+                            <img src="<%=path%>/img/img4/${phone.img}" >
                         <h3 class="items-title">${phone.name}</h3>
                         <p class="items-info">【限时领券至高立省700 | 12期免息】</p>
                         <p class="items-price">￥${phone.price}</p>

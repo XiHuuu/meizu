@@ -399,7 +399,9 @@
                     </td>
                     <td colspan="2">
                         <c:if test="${order.status eq 0}">
-                            <a style="color: orange" href="${pageContext.request.contextPath}/order/payment?order_id=${order.order_id}">去付款</a>
+                            <a style="color: orange" href="${pageContext.request.contextPath}/Alipay?order_number=${order.order_id}&money=${order.price}&order_name=phone&describe=zzz">去付款</a>
+<%--                            ${pageContext.request.contextPath}/toPay?order_id=${order.order_id}--%>
+<%--                            ${pageContext.request.contextPath}/order/payment?order_id=${order.order_id}--%>
                         </c:if>
                         <a href="${pageContext.request.contextPath}/order/deleteOrder?order_id=${order.order_id}">删除</a>
                     </td>

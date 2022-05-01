@@ -246,7 +246,11 @@
       <artifactId>commons-io</artifactId>
       <version>2.4</version>
     </dependency>
-
+    <dependency>
+      <groupId>com.alipay.sdk</groupId>
+      <artifactId>alipay-sdk-java</artifactId>
+      <version>3.3.49.ALL</version>
+    </dependency>
   </dependencies>
 
   <build>
@@ -266,7 +270,7 @@
         <version>2.1</version>
         <configuration>
           <port>8080</port>
-          <path>/hello</path>
+          <path>/meizu</path>
           <uriEncoding>UTF-8</uriEncoding>
           <server>tomcat7</server>
         </configuration>
